@@ -1,8 +1,5 @@
 <?php 
-require( __DIR__ . "/includes/load.php" );
 require(__DIR__ . "/includes/layout.php");
-
-requireAuth();
 
 ?>
 

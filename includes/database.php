@@ -48,14 +48,8 @@ class Database {
     }
 
     public function getPlace($id) {
-        // $result = $this->mysqli->prepare("SELECT * FROM places WHERE id = ?");
-        // $result->bind_param("s", $id);
-        // $result->execute();
-
-        // Unsecured statement!! Prone to SQL injection!
         $result = $this->mysqli->query("SELECT * FROM places WHERE id = '$id' ORDER BY id desc");
         
-        // Place not found!
         if ($result->num_rows < 1) {
             return [];
         }
